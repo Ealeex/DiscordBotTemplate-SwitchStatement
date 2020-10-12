@@ -26,13 +26,11 @@ client.on('message', async(message) => {
 
         case 'ping':
             let msg = await message.channel.send(":question:  **Ping?**");
-            msg.edit(`:ping_pong:  **Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms.**`);
-            break;
+            return msg.edit(`:ping_pong:  **Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms.**`);
 
         case 'help':
             let prefix = client.config.prefix;
-            message.channel.send(`**Command Help | [Required] {Optional}**\r${prefix}ping: Sends ping of client.\r${prefix}help: Returns command info.`);
-            break;
+            return message.channel.send(`**Command Help | [Required] {Optional}**\r${prefix}ping: Returns the bot's ping.\r${prefix}help: Returns command info.`);
 
     }
 
