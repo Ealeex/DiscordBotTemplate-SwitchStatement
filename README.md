@@ -1,7 +1,8 @@
 # DiscordJS Bot Template - Switch Statement
 
 This is a template bot for the DiscordJS library.\
-This specific template is based off switch statements.
+This specific template is based off switch statements.\
+These templates are meant to be beginner friendly.
 
 ## template Navigation
 The [If](https://github.com/Ealeex/DiscordBotTemplate-IfStatement) template uses if statements to select commands.\
