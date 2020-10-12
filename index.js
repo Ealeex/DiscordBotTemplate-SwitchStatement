@@ -1,4 +1,8 @@
-const { Client, Collection } = require('discord.js');
+// Discord Bot Template - Switch Statement
+// Made by: Ethan Lee
+// Github: https://github.com/Ealeex/DiscordBotTemplate-IfStatement
+
+const { Client } = require('discord.js');
 const client = new Client({disableEveryone: true, autoReconnect: true});
 client.config = require('./config.json');
 client.startTime = Date.now();
@@ -22,7 +26,12 @@ client.on('message', async(message) => {
 
         case 'ping':
             let msg = await message.channel.send(":question:  **Ping?**");
-            msg.edit(`:ping_pong:  **Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms.**`);
+            msg.edit(`:ping_pong:  **Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms.**`);
+            break;
+
+        case 'help':
+            let prefix = client.config.prefix;
+            message.channel.send(`**Command Help | [Required] {Optional}**\r${prefix}ping: Sends ping of client.\r${prefix}help: Returns command info.`);
             break;
 
     }
