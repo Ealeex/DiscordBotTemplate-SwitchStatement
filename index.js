@@ -1,6 +1,6 @@
 // Discord Bot Template - Switch Statement
 // Made by: Ethan Lee
-// Github: https://github.com/Ealeex/DiscordBotTemplate-IfStatement
+// Github: https://github.com/Ealeex/DiscordBotTemplate-SwitchStatement
 
 const { Client } = require('discord.js');
 const client = new Client({disableEveryone: true, autoReconnect: true});
