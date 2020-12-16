@@ -11,7 +11,7 @@ console.clear();
 client.on('ready', async () => {
     client.user.setActivity(`Serving ${client.guilds.cache.size} servers. | ${client.config.prefix}help | Made by L33`);
     console.log(`[INVITE] - https://discordapp.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`);
-    const servers = client.guilds.cache.map(guild => `\n\t> '${guild.name}' with Owner '${guild.owner.user.tag}' with ${guild.memberCount}`);
+    const servers = client.guilds.cache.map(guild => `\n\t> '${guild.name}' with ${guild.memberCount} members.`);
     console.log(`[INFO] - ${client.user.username} is online in ${client.guilds.cache.size} servers: ${servers}.`);
     console.log(`[CREATION] - ${client.user.username} was made on '${client.user.createdAt}'`);
     console.log(`[STATUS] - ${client.user.username} loaded in ${Date.now() - client.startTime}ms.`);
